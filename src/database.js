@@ -6,7 +6,6 @@ const URL =process.env.MONGODB_URL || 'mongodb+srv://ninjagabo:Ninjagabo.1312@cl
 
 mongoose.connect(URL,{
 	useNewUrlParser: true,
-	useCreateIndex: true,
 	useFindAndModify: false,
 	useUnifiedTopology: true 
 })
