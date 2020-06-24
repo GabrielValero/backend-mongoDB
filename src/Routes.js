@@ -19,7 +19,9 @@ const new_Task = new Schema({
 	description: String
 }, { versionKey: '_somethingElse' });
 const task= model('Task', new_Task);
-
+router.get('/',(req,res)=>{
+	res.send('Funciona');
+})
 router.route('/api/task')
 	.get(async (req,res)=>{
 		const response = await task.find();
