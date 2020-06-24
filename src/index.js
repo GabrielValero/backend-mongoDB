@@ -1,5 +1,5 @@
 const dotenv = require('dotenv').config();
-
+const server = http.createServer(app);
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -15,6 +15,6 @@ app.use(express.json());
 //Routes
 app.use(require('./Routes.js'))
 
-app.listen(app.get('port'),function (){
+server.listen(app.get('port'),function (){
 	console.log('server on port 3000');
 })
