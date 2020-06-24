@@ -1,7 +1,7 @@
 
 const mongoose = require('mongoose');
 
-const URL = MONGODB_URL;
+const URL = process.env.MONGODB_URL;
 
 
 mongoose.connect(URL,{
@@ -11,4 +11,4 @@ mongoose.connect(URL,{
 	useUnifiedTopology: true 
 })
 .then(db => console.log('DB is connected '))
-.catch(err=> console.log('Algo paso ', MONGODB_URL, '      ', err))
+.catch(err=> console.log('Algo paso ', process.env.MONGODB_URL, '      ', err))
