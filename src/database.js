@@ -1,7 +1,7 @@
 
 const mongoose = require('mongoose');
 
-const URL = 'mongodb+srv://ninjagabo:Ninjagabo.1312@cluster0-ni87o.mongodb.net/Cluster0?retryWrites=true&w=majority';
+const URL = MONGODB_URL;
 
 
 mongoose.connect(URL,{

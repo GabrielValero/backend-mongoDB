@@ -39,6 +39,7 @@ router.route('/api/task')
 			})
 		await response.save();
 		console.log(response);
+		res.send('Worked')
 	})
 router.route('/api/task/:id')
 	.get(async (req,res)=>{
@@ -54,10 +55,12 @@ router.route('/api/task/:id')
 				description: req.body.description
 			})
 		console.log(req.body);
+		res.send('Worked')
 	})
 	.delete(async (req,res)=>{
 		const response = await task.findByIdAndDelete(req.params.id);
 		console.log(response);
+		res.send('Worked')
 	})
 
 
