@@ -5,9 +5,10 @@ const URL =process.env.MONGODB_URL || 'mongodb+srv://ninjagabo:Ninjagabo.1312@cl
 
 
 mongoose.connect(URL,{
-	useCreateIndex: true,
 	useNewUrlParser: true,
+	useCreateIndex: true,
 	useFindAndModify: false,
 	useUnifiedTopology: true 
 })
-.then(db => console.log('DB is connected'))
+.then(db => console.log('DB is connected ' + process.env.MONGODB_URL))
+.catch(err=> console.log('Algo paso ', err))

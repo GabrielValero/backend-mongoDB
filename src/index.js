@@ -16,5 +16,5 @@ app.use(express.json());
 app.use(require('./Routes.js'))
 
 app.listen(app.get('port'),function (){
-	console.log('server on port 3000');
+	console.log('server on port ' + app.get('port'));
 })
